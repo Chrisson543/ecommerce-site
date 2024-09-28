@@ -9,7 +9,7 @@ const SubscribeForm = () => {
         <div>
           <h1 className=" text-4xl font-bold">Subscribe</h1>
         </div>
-        <div className="flex text-sm flex-col tablet:flex-row w-full tablet:space-x-3">
+        <div className="flex text-sm flex-col tablet:flex-row w-full tablet:space-x-3 space-y-1">
           <input className="w-full py-5 px-3  border-b-[1px] border-b-slate-200" type="text" placeholder="First Name" />
           <input className="w-full py-5 px-3  border-b-[1px] border-b-slate-200" type="text" placeholder="Last Name" />
           <input className="w-full py-5 px-3  border-b-[1px] border-b-slate-200" type="email" placeholder="E-Mail" />

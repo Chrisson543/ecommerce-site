@@ -9,6 +9,7 @@ import { useContext, useState, useEffect } from 'react';
 export default function Cart() {
   const [open, setOpen] = useState(false);
   const [subtotal, setSubtotal] = useState(0);
+  const [showCartMessage, setShowCartMessage] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -60,21 +61,23 @@ export default function Cart() {
       setSubtotal(num);
     };
     calculateSubtotal(); 
+    setShowCartMessage(false);
 
   }, [cart])
 
   return (
     <div>
-      <button onClick={toggleDrawer(true)} className='flex hover:cursor-pointer flex-row items-center space-x-3'>
+      <button onClick={toggleDrawer(true)} className='flex hover:cursor-pointer flex-row items-center space-x-1'>
         <Image src={'/images/cart.svg'} alt='cart-icon' width={20} height={20} />
-        <p className=' bg-black text-[14px] text-white rounded-full px-1.5'>{cartItems.length}</p>
+        <p className='bg-red-500 text-[14px] text-white rounded-full px-1.5'>{cartItems.length}</p>
       </button>
       <Drawer anchor='right' open={open} onClose={toggleDrawer(false)}>
         <div className='flex flex-col h-full tablet:w-[500px] w-screen'>
-          <div className='flex justify-between p-6 border-b-grey border-[1px]'>
+          <div className='flex justify-between items-center p-3 border-b-grey border-[1px]'>
             <h1 className='text-lg font-bold'>Your Cart</h1>
-            <button onClick={toggleDrawer(false)}>X</button>
+            <button className='p-4' onClick={toggleDrawer(false)}>X</button>
           </div>
+          {showCartMessage && <p className='bg-red-500 text-white text-center p-3'>Checkout is disabled on this site.</p>}
           <div className='flex flex-col h-full'>
             {cartItems}
           </div>
@@ -82,7 +85,7 @@ export default function Cart() {
             <p>Subtotal</p>
             <p className='font-bold'>${subtotal}</p>
           </div>
-          <button className='bg-[#333] text-white py-4'>Continue to Checkout</button>
+          <button onClick={() => {setShowCartMessage(true)}} className='bg-[#333] text-white py-4'>Continue to Checkout</button>
         </div>
       </Drawer>
     </div>

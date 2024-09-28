@@ -32,9 +32,10 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          
-          <Cart />
-          <NavbarDropdown />
+          <div className='flex space-x-2'>
+            <Cart />
+            <NavbarDropdown />
+          </div>
         </div>
       </div>
     </nav>
