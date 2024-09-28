@@ -1,0 +1,92 @@
+{
+  "tops": [
+    {
+      "id": 1,
+      "name": "Corteiz Shorts",
+      "price": 39.00,
+      "image": "/images/shorts1.png"
+    },
+    {
+      "id": 2,
+      "name": "Corteiz Shorts",
+      "price": 39.00,
+      "image": "/images/shorts1.png"
+    },
+    {
+      "id": 3,
+      "name": "Corteiz Shorts",
+      "price": 39.00,
+      "image": "/images/shorts1.png"
+    },
+    {
+      "id": 4,
+      "name": "Corteiz Shorts",
+      "price": 39.00,
+      "image": "/images/shorts1.png"
+    }
+  ],
+  "bottoms": [
+    {
+      "id": 5,
+      "name": "Corteiz Shorts",
+      "price": 39.00,
+      "image": "/images/shorts1.png"
+    },
+    {
+      "id": 6,
+      "name": "Corteiz Shorts",
+      "price": 39.00,
+      "image": "/images/shorts1.png"
+    },
+    {
+      "id": 7,
+      "name": "Corteiz Shorts",
+      "price": 39.00,
+      "image": "/images/shorts1.png"
+    },
+    {
+      "id": 8,
+      "name": "Corteiz Shorts",
+      "price": 39.00,
+      "image": "/images/shorts1.png"
+    },
+    {
+      "id": 9,
+      "name": "Corteiz Shorts",
+      "price": 39.00,
+      "image": "/images/shorts1.png"
+    },
+    {
+      "id": 10,
+      "name": "Corteiz Shorts",
+      "price": 39.00,
+      "image": "/images/shorts1.png"
+    },
+    {
+      "id": 11,
+      "name": "Corteiz Shorts",
+      "price": 39.00,
+      "image": "/images/shorts1.png"
+    },
+    {
+      "id": 12,
+      "name": "Corteiz Shorts",
+      "price": 39.00,
+      "image": "/images/shorts1.png"
+    }
+  ],
+  "accessories": [
+    {
+      "id": 13,
+      "name": "Corteiz Shorts",
+      "price": 39.00,
+      "image": "/images/shorts1.png"
+    },
+    {
+      "id": 14,
+      "name": "Corteiz Shorts",
+      "price": 39.00,
+      "image": "/images/shorts1.png"
+    }
+  ]
+}
