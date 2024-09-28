@@ -46,7 +46,7 @@ export default function ProductDescription({image, name, price, id}){
         <option value="XL">XL</option>
       </select>
       <label className="text-sm font-bold mb-1" htmlFor="quantity">Quantity</label>
-      <input onChange={(e) => {setQuantity(parseInt(e.target.value))}} min={0} value={quantity} className=" py-2 w-fit pl-3 pr-2 mb-3 border" type='number'/>
+      <input onChange={(e) => {setQuantity(parseInt(e.target.value))}} min={0} value={quantity} className=" py-2 w-fit pl-3 pr-2 mb-3 border text-black" type='number'/>
       {showErrorMessage && <p className="text-sm text-red-500">{errorMessage}</p>}
       <button onClick={() => {addItem(id, size, quantity)}} className="bg-[#333] w-fit text-sm px-5 mt-7 py-3 text-white">Add to Cart</button>
     </div>

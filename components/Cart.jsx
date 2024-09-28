@@ -13,14 +13,7 @@ export default function Cart() {
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
-  const calculateSubtotal = () => {
-    let num = 0;
-    cart.forEach(item => {
-      num += item.price * item.quantity;
-    });
-
-    setSubtotal(num);
-  };
+  
 
   const removeItem = (id) => {
     dispatch({ type: 'REMOVE_ITEM', payload: {id}})
@@ -58,7 +51,16 @@ export default function Cart() {
   })
 
   useEffect(() => {
-    calculateSubtotal();
+    const calculateSubtotal = () => {
+      let num = 0;
+      cart.forEach(item => {
+        num += item.price * item.quantity;
+      });
+  
+      setSubtotal(num);
+    };
+    calculateSubtotal(); 
+
   }, [cart])
 
   return (
@@ -68,7 +70,7 @@ export default function Cart() {
         <p className=' bg-black text-[14px] text-white rounded-full px-1.5'>{cartItems.length}</p>
       </button>
       <Drawer anchor='right' open={open} onClose={toggleDrawer(false)}>
-        <div className='flex flex-col h-full w-full'>
+        <div className='flex flex-col h-full tablet:w-[500px] w-screen'>
           <div className='flex justify-between p-6 border-b-grey border-[1px]'>
             <h1 className='text-lg font-bold'>Your Cart</h1>
             <button onClick={toggleDrawer(false)}>X</button>

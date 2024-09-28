@@ -2,10 +2,10 @@ import { getCategory } from "@/utils/fetchData"
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function Categories(){
-  const tops = await getCategory('tops');
-  const bottoms = await getCategory('bottoms');
-  const accessories = await getCategory('accessories');
+export default function Categories(){
+  const tops = getCategory('tops');
+  const bottoms = getCategory('bottoms');
+  const accessories = getCategory('accessories');
   return(
     <main className="flex flex-col h-[75vh] space-y-1 justify-center px-2">
       <div className="flex hover:scale-95 relative flex-row items-center h-[30%] rounded-3xl overflow-hidden">
