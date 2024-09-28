@@ -8,7 +8,7 @@ export default function Categories(){
   const accessories = getCategory('accessories');
   return(
     <main className="flex flex-col h-[75vh] space-y-1 justify-center px-2">
-      <div className="flex hover:scale-95 relative flex-row items-center h-[30%] rounded-3xl overflow-hidden">
+      <div className="mt-[77px] flex hover:scale-95 relative flex-row items-center h-[30%] rounded-3xl overflow-hidden">
         <Link href={"/categories/tops"}>
           <Image
             className=" opacity-80"

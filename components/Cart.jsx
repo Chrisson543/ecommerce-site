@@ -16,8 +16,8 @@ export default function Cart() {
   };
   
 
-  const removeItem = (id) => {
-    dispatch({ type: 'REMOVE_ITEM', payload: {id}})
+  const removeItem = (id, size) => {
+    dispatch({ type: 'REMOVE_ITEM', payload: {id, size}})
   };
   const updateQuantity = (id, prevQuantity, currentQuantity) => {
     const difference =  currentQuantity - prevQuantity
@@ -42,7 +42,7 @@ export default function Cart() {
           <p className='font-bold'>{item.name}</p>
           <p>${item.price}</p>
           <p>Size: {item.size}</p>
-          <button onClick={() => removeItem(item.id)} className='text-slate-400 w-min'>Remove</button>
+          <button onClick={() => removeItem(item.id, item.size)} className='text-slate-400 w-min'>Remove</button>
         </div>
         <div className='w-24 flex items-center justify-center font-bold text-lg p-3'>
           <input className="text-center w-full" onChange={(e) => {updateQuantity(item.id, item.quantity, parseInt(e.target.value))}} value={item.quantity} min={0} type='number'/>

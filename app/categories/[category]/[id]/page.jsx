@@ -15,17 +15,19 @@ export default function ProductView({ params }){
   const { name, price, image } = product;
 
   return(
-    <main className="flex flex-col tablet:flex-row">
-      <div className="flex flex-row justify-center tablet:w-[40%]">
-        <Image
-            src={image}
-            alt={name}
-            width={600}  
-            height={600}
-            className="object-contain object-center"
-          />
+    <main className="flex">
+      <div className="flex flex-col tablet:flex-row pt-[77px]">
+        <div className="flex flex-row justify-center tablet:w-[40%]">
+          <Image
+              src={image}
+              alt={name}
+              width={600}  
+              height={600}
+              className="object-contain object-center"
+            />
+        </div>
+        <ProductDescription image={image} name={name} price={price} category={category} id={id} />
       </div>
-      <ProductDescription image={image} name={name} price={price} category={category} id={id} />
     </main>
   );
 };

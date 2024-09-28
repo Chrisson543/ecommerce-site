@@ -20,7 +20,9 @@ export const cartReducer = (state, action) => {
       };
     case 'REMOVE_ITEM':
       return {
-        cart: state.cart.filter(item => item.id !== action.payload.id),
+        cart: state.cart.filter(item => {
+          return item.id !== action.payload.id || item.size !== action.payload.size
+        }),
       };
     case 'SET_CART':
       return {

@@ -11,7 +11,7 @@ export default function Category({ params }){
 
   return(
     <main className="flex flex-col items-center">
-      <div className="border-b-[1px] border-b-slate-800 w-full justify-center flex">
+      <div className="border-b-[1px] mt-[77px] border-b-slate-800 w-full justify-center flex">
         <h1 className=" text-5xl capitalize font-bold my-6">{category}</h1>
       </div>
       <div className="flex flex-col w-full tablet:grid tablet:grid-cols-4">

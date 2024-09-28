@@ -7,7 +7,7 @@ import NavbarDropdown from './NavbarDropdown';
 
 const Navbar = () => {
   return(
-    <nav className='flex relative flex-col h-[77px] bg-[#181A20] shadow-md'>
+    <nav className='flex fixed z-10 w-full flex-col h-[77px] bg-[#181A20] shadow-md'>
       <div className='flex flex-row justify-between w-full p-5 border-b-slate-200 items-center'>
         <div className='flex flex-row space-x-5 items-center text-slate-300'>
           <Link href={'/'} className='font-bold text-[24px]'>CHRISSTORE</Link>

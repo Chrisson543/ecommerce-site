@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <main className="flex h-full flex-col items-center justify-between">
-      <section className="min-h-[75vh] flex flex-col items-center laptop:grid laptop:grid-cols-2">
+      <section className="min-h-[75vh] pt-[77px] flex flex-col items-center laptop:grid laptop:grid-cols-2">
         <div className="relative w-full h-[360px] laptop:h-full overflow-hidden flex justify-center">
           <Image 
           src={'/images/pepeDressed.jpg'}
