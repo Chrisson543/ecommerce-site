@@ -1,4 +1,4 @@
-#ecommerce-app
+# ecommerce-app
 
 An ecommerce app created with Nextjs which has various categories, products and a functioning cart.
 
